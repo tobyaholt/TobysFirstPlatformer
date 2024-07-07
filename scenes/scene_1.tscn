@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://coxm7uj35n3ar"]
+[gd_scene load_steps=6 format=3 uid="uid://coxm7uj35n3ar"]
 
 [ext_resource type="Environment" uid="uid://dsay4gdr8k6ur" path="res://environment/WE_test.tres" id="1_fh65g"]
 [ext_resource type="Material" uid="uid://cgpmj6nvbqiwm" path="res://materials/grid.tres" id="2_ltutq"]
+[ext_resource type="PackedScene" uid="uid://byqbn3pbjcqg7" path="res://scenes/player.tscn" id="3_f0icp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mh1uq"]
 material = ExtResource("2_ltutq")
@@ -27,5 +28,5 @@ mesh = SubResource("BoxMesh_mh1uq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_hosym")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.807639, 2.11926)
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_f0icp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
